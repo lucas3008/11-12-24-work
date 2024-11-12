@@ -1,0 +1,19 @@
+# Create a sample data frame with missing values
+data <- data.frame(
+  ID = c(1, 2, 3),
+  Val1 = c(10, NA, 30),
+  Val2 = c(5, 15, NA),
+  val3 = c(NA, 20, 5),
+  val4 = c(15, 25, NA)
+)
+ 
+# Display the original data frame with missing values
+print("Original Data Frame with Missing Values:")
+print(data)
+ 
+# Calculate the row sums, treating missing values as zero
+row_sums <- rowSums(data[ c("Val2", "val4")], na.rm = TRUE)
+ 
+# Display the row sums
+print("Row Sums:")
+print(row_sums)
